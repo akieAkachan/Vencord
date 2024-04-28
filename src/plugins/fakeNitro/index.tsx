@@ -934,8 +934,6 @@ export default definePlugin({
                 hasBypass = true;
 
                 const url = new URL(emoji.url);
-                url.searchParams.set("size", s.emojiSize.toString());
-                url.searchParams.set("name", emoji.name);
 
                 const linkText = s.hyperLinkText.replaceAll("{{NAME}}", emoji.name);
 
