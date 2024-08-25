@@ -546,7 +546,7 @@ export default definePlugin({
                 if (fakeNitroMatch) {
                     let url: URL | null = null;
                     try {
-                        url = new URL(child.props.href);
+                        url = new URL(child.props.href.replaceAll("cdn.discordapp.com","media.discordapp.net"));
                     } catch { }
 
                     const emojiName = EmojiStore.getCustomEmojiById(fakeNitroMatch[1])?.name ?? url?.searchParams.get("name") ?? "FakeNitroEmoji";
